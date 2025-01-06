@@ -16,6 +16,9 @@ public class Main {
     for(int i=0;i<3;i++) {
       System.out.println(a.get(i));
     }
+    
+    IndianParents ip = new IndianParents();
+    ip.names();
   }
 }
 enum Name {
@@ -40,13 +43,12 @@ class Chicken implements Animal,Protect_Animal {
   //  Chicken() {
 //    this.animal="Chickden"; // inteface does not allow this changing whatever was declared in interface is final
 //  }
+
   @Override
   public int ears() {
     Main.static_method();
     return 2;
   }
-
-
 
   @Override
   public int eyes() {
@@ -89,4 +91,24 @@ class Chicken2 extends Animal2 {
   public int legs() {
     return 2;
   }
+}
+
+class Parent {
+  Parent(){
+    System.out.println("Parent intitialised");
+  }
+
+  public void names() {
+    System.out.println("Parent names are a and b");
+  }
+}
+
+//class subClasss :: parentClass {
+//
+//}
+
+
+
+class IndianParents extends Parent {
+
 }

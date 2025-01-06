@@ -2,34 +2,54 @@ abstract class Demo //abstract class
 {
   //abstract method declaration
   abstract void display();
-
+  void walk() {
+    System.out.println("Walking");
+  }
 }
-class OOPS {
+
+interface demo2 {
+  void display();
+}
+
+class OOPSS {
   int data;
   String Name;
-  OOPS(){
+
+  OOPSS() {
     System.out.println("Thanks for using me");
   }
-  public void setData(int d){
-    this.data=d;
-    this.Name=String.valueOf(d);
+
+  public void setData(int d) {
+    this.data = d;
+
+    this.Name = String.valueOf(d);
   }
-  public void This(){
-    System.out.println(this.data+"----"+this.Name);
+
+  public void This() {
+    System.out.println(this.data + "----" + this.Name);
   }
 }
-class MyClass extends Demo
-{
-  //method impelmentation
+
+class alsoMyClass implements demo2 {
+
+  @Override
+  public void display() {
+    System.out.println("Display it !");
+  }
+}
+
+class MyClass extends Demo {
   void display() {
     System.out.println("Abstract method?");
   }
-  public static void main(String args[])
-  {
+
+  // now walk becomes optional
+
+  public static void main(String args[]) {
     Demo obj = new MyClass();
     obj.display();
 
-    OOPS o = new OOPS();
+    OOPSS o = new OOPSS();
     o.setData(2);
     o.This();
   }

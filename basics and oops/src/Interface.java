@@ -1,5 +1,8 @@
 import java.lang.instrument.Instrumentation;
 
+// the default access specifier for an interface is public but for other class it is package-private
+// package-private - accessed within the same directory of the package
+
 public class Interface {
   private static Instrumentation instrumentation;
   public static void main(String args[]) {
